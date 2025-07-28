@@ -5,12 +5,22 @@ import android.content.pm.PackageManager
 import android.os.Bundle
 import android.widget.Button
 import android.widget.Toast
+import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.enableEdgeToEdge
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
+import androidx.compose.foundation.layout.padding
+import androidx.compose.material.Button
+import androidx.compose.material.Text
+import androidx.compose.runtime.Composable
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.ComposeView
+import androidx.compose.ui.unit.dp
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import org.w3c.dom.Text
 
 class MainActivity : AppCompatActivity() {
 
@@ -22,6 +32,34 @@ class MainActivity : AppCompatActivity() {
         findViewById<Button>(R.id.request).setOnClickListener {
             checkForPermissions()
         }
+
+        val composeView = findViewById<ComposeView>(R.id.compose_view)
+        composeView.setContent {
+            MyComposableContent()
+        }
+    }
+
+
+    @Composable
+    fun MyComposableContent() {
+        val launcher = rememberLauncherForActivityResult(ActivityResultContracts.RequestPermission()){
+            isGranted ->
+            if (isGranted) {
+                Toast.makeText(applicationContext, "Permission Granted", Toast.LENGTH_SHORT).show()
+            } else {
+                Toast.makeText(applicationContext, "Permission Denied", Toast.LENGTH_SHORT).show()
+            }
+
+        }
+        Button(onClick = {
+            launcher.launch(Manifest.permission.ACCESS_FINE_LOCATION)
+                         }, modifier = Modifier.padding(20.dp)) {
+            Text("Request Permission")
+        }
+    }
+
+    private fun checkForPermissionsCompose() {
+
     }
 
     private fun checkForPermissions() {
@@ -50,3 +88,4 @@ class MainActivity : AppCompatActivity() {
 
     }
 }
+

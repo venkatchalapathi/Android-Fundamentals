@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace = "com.venkat.myapplication"
+    namespace = "com.venkat.navigation_components"
     compileSdk = 36
 
     defaultConfig {
-        applicationId = "com.venkat.myapplication"
+        applicationId = "com.venkat.navigation_components"
         minSdk = 24
         targetSdk = 36
         versionCode = 1
@@ -42,13 +42,16 @@ dependencies {
     implementation(libs.material)
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
+    implementation(libs.androidx.navigation.fragment)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
 
-    implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.6.2")
-    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.2")
-    implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.6.2")
-    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.8.0")
-    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.10.2")
+
+    // Core Navigation
+    implementation("androidx.navigation:navigation-fragment-ktx:2.9.3")
+    implementation("androidx.navigation:navigation-ui-ktx:2.7.7")
+// If you're using ViewModel, LiveData (optional)
+    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.8.0")
+    implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.8.0")
 }

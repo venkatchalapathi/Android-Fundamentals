@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<incidents format="6" by="lint 8.11.1" type="partial_results">
+    <map id="UnsafeIntentLaunch">
+            <map id="unprotected">
+                <entry
+                    name="com.venkat.kotlin_programming.MainActivity"
+                    boolean="true"/>
+            </map>
+    </map>
+    <map id="UnusedResources">
+        <location id="R.color.black"
+            file="${:kotlin-programming*debug*MAIN*sourceProvider*0*resDir*0}/values/colors.xml"
+            line="3"
+            column="12"
+            startOffset="62"
+            endLine="3"
+            endColumn="24"
+            endOffset="74"/>
+        <location id="R.color.white"
+            file="${:kotlin-programming*debug*MAIN*sourceProvider*0*resDir*0}/values/colors.xml"
+            line="4"
+            column="12"
+            startOffset="104"
+            endLine="4"
+            endColumn="24"
+            endOffset="116"/>
+        <entry
+            name="model"
+            string="color[black(D),white(D)],drawable[ic_launcher_background(U),ic_launcher_foreground(U),ic_launcher_foreground_1(R)],mipmap[ic_launcher(U),ic_launcher_round(U)],string[app_name(U)],style[Theme_MyApplication(U)];3^4,5^2^3,6^2^3;;;"/>
+    </map>
+
+</incidents>

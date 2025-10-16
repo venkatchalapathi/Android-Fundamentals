@@ -1,0 +1,7 @@
+#Fri Oct 10 11:54:42 IST 2025
+base.0=/Users/venkat/Venkat2.0/AndroidCocepts/Android-Fundamentals/kotlin-programming/build/intermediates/dex/release/mergeDexRelease/classes.dex
+base.1=/Users/venkat/Venkat2.0/AndroidCocepts/Android-Fundamentals/kotlin-programming/build/intermediates/dex/release/mergeDexRelease/classes2.dex
+path.0=classes.dex
+path.1=classes2.dex
+renamed.0=classes.dex
+renamed.1=classes2.dex

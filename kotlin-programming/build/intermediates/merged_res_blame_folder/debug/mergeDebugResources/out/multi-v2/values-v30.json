@@ -1,0 +1,19 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.venkat.kotlin_programming.kotlin-programming-mergeDebugResources-46:/values-v30/values-v30.xml",
+            "map": [
+                {
+                    "source": "/Users/venkat/.gradle/caches/8.13/transforms/efb1950a43f5a97c09f6f7f05b2f393e/transformed/material3-release/res/values-v30/values-v30.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "72",
+                        "endOffsets": "123"
+                    }
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,367 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<incidents format="6" by="lint 8.11.1" type="incidents">
+
+    <incident
+        id="RedundantLabel"
+        severity="warning"
+        message="Redundant label can be removed">
+        <fix-attribute
+            description="Delete label"
+            namespace="http://schemas.android.com/apk/res/android"
+            attribute="label"/>
+        <location
+            file="${:kotlin-programming*debug*MAIN*sourceProvider*0*manifest*0}"
+            line="14"
+            column="13"
+            startOffset="494"
+            endLine="14"
+            endColumn="45"
+            endOffset="526"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of androidx.lifecycle:lifecycle-runtime-ktx than 2.6.2 is available: 2.9.4">
+        <fix-replace
+            description="Change to 2.9.4"
+            family="Update versions"
+            oldString="2.6.2"
+            replacement="2.9.4"
+            priority="0"/>
+        <location
+            file="${:kotlin-programming*projectDir}/build.gradle.kts"
+            line="60"
+            column="20"
+            startOffset="1747"
+            endLine="60"
+            endColumn="68"
+            endOffset="1795"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of androidx.lifecycle:lifecycle-viewmodel-ktx than 2.6.2 is available: 2.9.4">
+        <fix-replace
+            description="Change to 2.9.4"
+            family="Update versions"
+            oldString="2.6.2"
+            replacement="2.9.4"
+            priority="0"/>
+        <location
+            file="${:kotlin-programming*projectDir}/build.gradle.kts"
+            line="61"
+            column="20"
+            startOffset="1816"
+            endLine="61"
+            endColumn="70"
+            endOffset="1866"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of androidx.lifecycle:lifecycle-viewmodel-compose than 2.6.2 is available: 2.9.4">
+        <fix-replace
+            description="Change to 2.9.4"
+            family="Update versions"
+            oldString="2.6.2"
+            replacement="2.9.4"
+            priority="0"/>
+        <location
+            file="${:kotlin-programming*projectDir}/build.gradle.kts"
+            line="62"
+            column="20"
+            startOffset="1887"
+            endLine="62"
+            endColumn="74"
+            endOffset="1941"/>
+    </incident>
+
+    <incident
+        id="NewerVersionAvailable"
+        severity="warning"
+        message="A newer version of org.jetbrains.kotlinx:kotlinx-coroutines-core than 1.8.0 is available: 1.10.2">
+        <fix-replace
+            description="Change to 1.10.2"
+            family="Update versions"
+            oldString="1.8.0"
+            replacement="1.10.2"
+            priority="0"/>
+        <location
+            file="${:kotlin-programming*projectDir}/build.gradle.kts"
+            line="63"
+            column="20"
+            startOffset="1962"
+            endLine="63"
+            endColumn="73"
+            endOffset="2015"/>
+    </incident>
+
+    <incident
+        id="UseTomlInstead"
+        severity="warning"
+        message="Use version catalog instead (androidx.lifecycle:lifecycle-runtime-ktx is already available as `androidx-lifecycle-runtime-ktx`, but using version 2.9.1 instead)">
+        <fix-alternatives>
+            <fix-composite
+                description="Replace with new library catalog declaration for lifecycle-runtime-ktx-v262"
+                robot="true"
+                independent="true">
+                <fix-replace
+                    description="Replace with androidxLifecycleRuntimeKtx = &quot;2.6.2&quot;..."
+                    robot="true"
+                    independent="true"
+                    oldString="_lint_insert_begin_"
+                    replacement="androidxLifecycleRuntimeKtx = &quot;2.6.2&quot;&#xA;"
+                    priority="0">
+                    <range
+                        file="$HOME/Venkat2.0/AndroidCocepts/Android-Fundamentals/gradle/libs.versions.toml"
+                        startOffset="26"
+                        endOffset="26"/>
+                </fix-replace>
+                <fix-replace
+                    description="Replace with lifecycle-runtime-ktx-v262 = { module = &quot;androidx.lifecycle:lifecycle-runtime-ktx&quot;, version.ref = &quot;androidxLifecycleRuntimeKtx&quot; }..."
+                    robot="true"
+                    independent="true"
+                    oldString="_lint_insert_begin_"
+                    replacement="lifecycle-runtime-ktx-v262 = { module = &quot;androidx.lifecycle:lifecycle-runtime-ktx&quot;, version.ref = &quot;androidxLifecycleRuntimeKtx&quot; }&#xA;"
+                    priority="0">
+                    <range
+                        file="$HOME/Venkat2.0/AndroidCocepts/Android-Fundamentals/gradle/libs.versions.toml"
+                        startOffset="1126"
+                        endOffset="1126"/>
+                </fix-replace>
+                <fix-replace
+                    description="Replace with libs.lifecycle.runtime.ktx.v262"
+                    robot="true"
+                    independent="true"
+                    replacement="libs.lifecycle.runtime.ktx.v262"
+                    priority="0">
+                    <range
+                        file="${:kotlin-programming*projectDir}/build.gradle.kts"
+                        startOffset="1747"
+                        endOffset="1795"/>
+                </fix-replace>
+            </fix-composite>
+            <fix-replace
+                description="Replace with existing version catalog reference `androidx-lifecycle-runtime-ktx` (version 2.9.1)"
+                replacement="libs.androidx.lifecycle.runtime.ktx"
+                priority="0">
+                <range
+                    file="${:kotlin-programming*projectDir}/build.gradle.kts"
+                    startOffset="1747"
+                    endOffset="1795"/>
+            </fix-replace>
+        </fix-alternatives>
+        <location
+            file="${:kotlin-programming*projectDir}/build.gradle.kts"
+            line="60"
+            column="20"
+            startOffset="1747"
+            endLine="60"
+            endColumn="68"
+            endOffset="1795"/>
+    </incident>
+
+    <incident
+        id="UseTomlInstead"
+        severity="warning"
+        message="Use version catalog instead">
+        <fix-composite
+            description="Replace with new library catalog declaration for lifecycle-viewmodel-ktx"
+            robot="true">
+            <fix-replace
+                description="Replace with lifecycleViewmodelKtxVersion = &quot;2.6.2&quot;..."
+                robot="true"
+                oldString="_lint_insert_begin_"
+                replacement="lifecycleViewmodelKtxVersion = &quot;2.6.2&quot;&#xA;"
+                priority="0">
+                <range
+                    file="$HOME/Venkat2.0/AndroidCocepts/Android-Fundamentals/gradle/libs.versions.toml"
+                    startOffset="180"
+                    endOffset="180"/>
+            </fix-replace>
+            <fix-replace
+                description="Replace with lifecycle-viewmodel-ktx = { module = &quot;androidx.lifecycle:lifecycle-viewmodel-ktx&quot;, version.ref = &quot;lifecycleViewmodelKtxVersion&quot; }..."
+                robot="true"
+                oldString="_lint_insert_begin_"
+                replacement="lifecycle-viewmodel-ktx = { module = &quot;androidx.lifecycle:lifecycle-viewmodel-ktx&quot;, version.ref = &quot;lifecycleViewmodelKtxVersion&quot; }&#xA;"
+                priority="0">
+                <range
+                    file="$HOME/Venkat2.0/AndroidCocepts/Android-Fundamentals/gradle/libs.versions.toml"
+                    startOffset="1126"
+                    endOffset="1126"/>
+            </fix-replace>
+            <fix-replace
+                description="Replace with libs.lifecycle.viewmodel.ktx"
+                robot="true"
+                replacement="libs.lifecycle.viewmodel.ktx"
+                priority="0">
+                <range
+                    file="${:kotlin-programming*projectDir}/build.gradle.kts"
+                    startOffset="1816"
+                    endOffset="1866"/>
+            </fix-replace>
+        </fix-composite>
+        <location
+            file="${:kotlin-programming*projectDir}/build.gradle.kts"
+            line="61"
+            column="20"
+            startOffset="1816"
+            endLine="61"
+            endColumn="70"
+            endOffset="1866"/>
+    </incident>
+
+    <incident
+        id="UseTomlInstead"
+        severity="warning"
+        message="Use version catalog instead">
+        <fix-composite
+            description="Replace with new library catalog declaration for lifecycle-viewmodel-compose"
+            robot="true">
+            <fix-replace
+                description="Replace with lifecycleViewmodelComposeVersion = &quot;2.6.2&quot;..."
+                robot="true"
+                oldString="_lint_insert_begin_"
+                replacement="lifecycleViewmodelComposeVersion = &quot;2.6.2&quot;&#xA;"
+                priority="0">
+                <range
+                    file="$HOME/Venkat2.0/AndroidCocepts/Android-Fundamentals/gradle/libs.versions.toml"
+                    startOffset="180"
+                    endOffset="180"/>
+            </fix-replace>
+            <fix-replace
+                description="Replace with lifecycle-viewmodel-compose = { module = &quot;androidx.lifecycle:lifecycle-viewmodel-compose&quot;, version.ref = &quot;lifecycleViewmodelComposeVersion&quot; }..."
+                robot="true"
+                oldString="_lint_insert_begin_"
+                replacement="lifecycle-viewmodel-compose = { module = &quot;androidx.lifecycle:lifecycle-viewmodel-compose&quot;, version.ref = &quot;lifecycleViewmodelComposeVersion&quot; }&#xA;"
+                priority="0">
+                <range
+                    file="$HOME/Venkat2.0/AndroidCocepts/Android-Fundamentals/gradle/libs.versions.toml"
+                    startOffset="1126"
+                    endOffset="1126"/>
+            </fix-replace>
+            <fix-replace
+                description="Replace with libs.lifecycle.viewmodel.compose"
+                robot="true"
+                replacement="libs.lifecycle.viewmodel.compose"
+                priority="0">
+                <range
+                    file="${:kotlin-programming*projectDir}/build.gradle.kts"
+                    startOffset="1887"
+                    endOffset="1941"/>
+            </fix-replace>
+        </fix-composite>
+        <location
+            file="${:kotlin-programming*projectDir}/build.gradle.kts"
+            line="62"
+            column="20"
+            startOffset="1887"
+            endLine="62"
+            endColumn="74"
+            endOffset="1941"/>
+    </incident>
+
+    <incident
+        id="UseTomlInstead"
+        severity="warning"
+        message="Use version catalog instead">
+        <fix-composite
+            description="Replace with new library catalog declaration for jetbrains-kotlinx-coroutines-core"
+            robot="true">
+            <fix-replace
+                description="Replace with kotlinxCoroutinesCoreVersion = &quot;1.8.0&quot;..."
+                robot="true"
+                oldString="_lint_insert_begin_"
+                replacement="kotlinxCoroutinesCoreVersion = &quot;1.8.0&quot;&#xA;"
+                priority="0">
+                <range
+                    file="$HOME/Venkat2.0/AndroidCocepts/Android-Fundamentals/gradle/libs.versions.toml"
+                    startOffset="146"
+                    endOffset="146"/>
+            </fix-replace>
+            <fix-replace
+                description="Replace with jetbrains-kotlinx-coroutines-core = { module = &quot;org.jetbrains.kotlinx:kotlinx-coroutines-core&quot;, version.ref = &quot;kotlinxCoroutinesCoreVersion&quot; }..."
+                robot="true"
+                oldString="_lint_insert_begin_"
+                replacement="jetbrains-kotlinx-coroutines-core = { module = &quot;org.jetbrains.kotlinx:kotlinx-coroutines-core&quot;, version.ref = &quot;kotlinxCoroutinesCoreVersion&quot; }&#xA;"
+                priority="0">
+                <range
+                    file="$HOME/Venkat2.0/AndroidCocepts/Android-Fundamentals/gradle/libs.versions.toml"
+                    startOffset="747"
+                    endOffset="747"/>
+            </fix-replace>
+            <fix-replace
+                description="Replace with libs.jetbrains.kotlinx.coroutines.core"
+                robot="true"
+                replacement="libs.jetbrains.kotlinx.coroutines.core"
+                priority="0">
+                <range
+                    file="${:kotlin-programming*projectDir}/build.gradle.kts"
+                    startOffset="1962"
+                    endOffset="2015"/>
+            </fix-replace>
+        </fix-composite>
+        <location
+            file="${:kotlin-programming*projectDir}/build.gradle.kts"
+            line="63"
+            column="20"
+            startOffset="1962"
+            endLine="63"
+            endColumn="73"
+            endOffset="2015"/>
+    </incident>
+
+    <incident
+        id="UseTomlInstead"
+        severity="warning"
+        message="Use version catalog instead">
+        <fix-composite
+            description="Replace with new library catalog declaration for jetbrains-kotlinx-coroutines-android"
+            robot="true">
+            <fix-replace
+                description="Replace with kotlinxCoroutinesAndroidVersion = &quot;1.10.2&quot;..."
+                robot="true"
+                oldString="_lint_insert_begin_"
+                replacement="kotlinxCoroutinesAndroidVersion = &quot;1.10.2&quot;&#xA;"
+                priority="0">
+                <range
+                    file="$HOME/Venkat2.0/AndroidCocepts/Android-Fundamentals/gradle/libs.versions.toml"
+                    startOffset="146"
+                    endOffset="146"/>
+            </fix-replace>
+            <fix-replace
+                description="Replace with jetbrains-kotlinx-coroutines-android = { module = &quot;org.jetbrains.kotlinx:kotlinx-coroutines-android&quot;, version.ref = &quot;kotlinxCoroutinesAndroidVersion&quot; }..."
+                robot="true"
+                oldString="_lint_insert_begin_"
+                replacement="jetbrains-kotlinx-coroutines-android = { module = &quot;org.jetbrains.kotlinx:kotlinx-coroutines-android&quot;, version.ref = &quot;kotlinxCoroutinesAndroidVersion&quot; }&#xA;"
+                priority="0">
+                <range
+                    file="$HOME/Venkat2.0/AndroidCocepts/Android-Fundamentals/gradle/libs.versions.toml"
+                    startOffset="747"
+                    endOffset="747"/>
+            </fix-replace>
+            <fix-replace
+                description="Replace with libs.jetbrains.kotlinx.coroutines.android"
+                robot="true"
+                replacement="libs.jetbrains.kotlinx.coroutines.android"
+                priority="0">
+                <range
+                    file="${:kotlin-programming*projectDir}/build.gradle.kts"
+                    startOffset="2036"
+                    endOffset="2093"/>
+            </fix-replace>
+        </fix-composite>
+        <location
+            file="${:kotlin-programming*projectDir}/build.gradle.kts"
+            line="64"
+            column="20"
+            startOffset="2036"
+            endLine="64"
+            endColumn="77"
+            endOffset="2093"/>
+    </incident>
+
+</incidents>

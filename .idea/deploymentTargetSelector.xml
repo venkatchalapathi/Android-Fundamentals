@@ -13,6 +13,14 @@
       </SelectionState>
       <SelectionState runConfigName="flow-demo">
         <option name="selectionMode" value="DROPDOWN" />
+        <DropdownSelection timestamp="2025-10-13T04:44:06.454991Z">
+          <Target type="DEFAULT_BOOT">
+            <handle>
+              <DeviceId pluginId="LocalEmulator" identifier="path=/Users/venkat/.android/avd/Pixel_9.avd" />
+            </handle>
+          </Target>
+        </DropdownSelection>
+        <DialogSelection />
       </SelectionState>
       <SelectionState runConfigName="state-flow-demo">
         <option name="selectionMode" value="DROPDOWN" />
@@ -21,6 +29,12 @@
         <option name="selectionMode" value="DROPDOWN" />
       </SelectionState>
       <SelectionState runConfigName="navigation-component-compose">
+        <option name="selectionMode" value="DROPDOWN" />
+      </SelectionState>
+      <SelectionState runConfigName="kotlin-programming">
+        <option name="selectionMode" value="DROPDOWN" />
+      </SelectionState>
+      <SelectionState runConfigName="clean-architecture">
         <option name="selectionMode" value="DROPDOWN" />
       </SelectionState>
     </selectionStates>

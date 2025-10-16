@@ -11,7 +11,9 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/clean-architecture" />
             <option value="$PROJECT_DIR$/flow-demo" />
+            <option value="$PROJECT_DIR$/kotlin-programming" />
             <option value="$PROJECT_DIR$/navigation-component-compose" />
             <option value="$PROJECT_DIR$/navigation-components" />
             <option value="$PROJECT_DIR$/run-time-permissions" />
